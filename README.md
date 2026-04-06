@@ -132,4 +132,4 @@ Key alignment:
 | [model-evaluation-framework](https://github.com/simaba/model-evaluation-framework) | Broader ML model evaluation |
 | [nist-ai-rmf-implementation-guide](https://github.com/simaba/nist-ai-rmf-implementation-guide) | NIST AI RMF guide |
 
-*Maintained by [Sima Bagheri](https://github.com/simaba) · Connect on [LinkedIn](https://www.linkedin.com/in/simabagheri)*
+*Maintained by [Sima Bagheri](https://github.com/simaba) · Connect on [LinkedIn](https://www.linkedin.com/in/simaba/)*
