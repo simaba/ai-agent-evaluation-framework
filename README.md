@@ -16,12 +16,24 @@ Use this repository when you need **measurement and pass/fail logic** for AI age
 - which scenarios to test
 - how to score performance, safety, and reliability
 - what should appear in an evaluation report
+- how to structure evaluation evidence for human review and future automation
 
 Do **not** start here if you need the oversight model. Use [`multi-agent-governance`](https://github.com/simaba/multi-agent-governance).
 
 Do **not** start here if you need orchestration patterns. Use [`agent-orchestration`](https://github.com/simaba/agent-orchestration).
 
 Do **not** start here if you want runnable behavior. Use [`agent-simulator`](https://github.com/simaba/agent-simulator).
+
+---
+
+## Practical artifacts
+
+| Artifact | Use for |
+|---|---|
+| [`templates/evaluation-report.md`](templates/evaluation-report.md) | Human-readable agent evaluation report |
+| [`examples/sample-evaluation-report.md`](examples/sample-evaluation-report.md) | Filled generic Markdown example |
+| [`schemas/evaluation-report.schema.json`](schemas/evaluation-report.schema.json) | Machine-readable report schema for structured evaluation evidence |
+| [`examples/sample-evaluation-report.json`](examples/sample-evaluation-report.json) | Filled JSON example aligned to the schema |
 
 ---
 
@@ -95,35 +107,24 @@ Do **not** start here if you want runnable behavior. Use [`agent-simulator`](htt
 
 ---
 
-## Evaluation report template
+## Human-readable report template
 
-```markdown
-## AI Agent Evaluation Report
+Use [`templates/evaluation-report.md`](templates/evaluation-report.md) for review meetings, sign-off packs, and stakeholder alignment.
 
-**Agent:** [Agent Name and Version]
-**Evaluation Date:** [Date]
-**Evaluator:** [Name / Team]
-**Environment:** [Staging / Production]
+## Machine-readable report schema
 
-### Summary
-| Dimension | Score | Pass/Fail |
-|---|---|---|
-| Task Performance | X% | ✅ / ❌ |
-| Safety & Reliability | X% | ✅ / ❌ |
-| Operational Reliability | Xms P99 | ✅ / ❌ |
-| Governance & Auditability | X/4 criteria | ✅ / ❌ |
+Use [`schemas/evaluation-report.schema.json`](schemas/evaluation-report.schema.json) when you want evaluation results to be structured for later validation, CI checks, dashboards, or trend analysis.
 
-### Findings
-[Describe key findings, failures, and anomalies]
+The schema captures:
 
-### Recommendations
-[List specific actions required before production deployment]
-
-### Sign-Off
-- [ ] Technical Owner: _________________
-- [ ] AI Governance Lead: _________________
-- [ ] Legal/Compliance (if high-risk): _________________
-```
+- metadata
+- recommendation and blockers
+- scope
+- scenarios
+- scorecard results
+- findings
+- oversight triggers
+- release decision and sign-off
 
 ---
 
